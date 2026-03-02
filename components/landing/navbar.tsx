@@ -9,14 +9,13 @@ import type { Locale } from "@/lib/i18n/config";
 import type { getDictionary } from "@/lib/i18n/get-dictionary";
 
 interface NavbarProps {
-  onAuthClick: (mode: "login" | "register") => void;
-  isLoggedIn?: boolean;
   dict: ReturnType<typeof getDictionary>;
   lang: Locale;
 }
 
-export function Navbar({ onAuthClick, isLoggedIn = false, dict, lang }: NavbarProps) {
+export function Navbar({ dict, lang }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
+  const appUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,12 +47,7 @@ export function Navbar({ onAuthClick, isLoggedIn = false, dict, lang }: NavbarPr
 
           {/* Navigation Menu */}
           <div className="hidden md:flex items-center gap-6">
-            <Link
-              href="/events"
-              className="text-sm font-medium text-gray-700 hover:text-indigo-600 transition-colors"
-            >
-              Events
-            </Link>
+            {/* Navigation items can be added here */}
           </div>
 
           {/* Language Switcher & Auth Buttons */}
@@ -93,24 +87,16 @@ export function Navbar({ onAuthClick, isLoggedIn = false, dict, lang }: NavbarPr
               <Languages className="w-5 h-5 text-gray-700" />
             </Link>
 
-            {isLoggedIn ? (
-              <Button asChild className="bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white shadow-sm">
-                <Link href="/dashboard">{dict.navbar.dashboard}</Link>
-              </Button>
-            ) : (
-              <>
-                <Button
-                  variant="ghost"
-                  onClick={() => onAuthClick("login")}
-                  className="text-gray-600 hover:text-gray-900 hover:bg-gray-100/80 hidden sm:inline-flex"
-                >
-                  {dict.navbar.signin}
-                </Button>
-                <Button onClick={() => onAuthClick("register")} className="bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white shadow-sm">
-                  {dict.navbar.getStarted}
-                </Button>
-              </>
-            )}
+            <Button
+              asChild
+              variant="ghost"
+              className="text-gray-600 hover:text-gray-900 hover:bg-gray-100/80 hidden sm:inline-flex"
+            >
+              <a href={`${appUrl}?auth=login`}>{dict.navbar.signin}</a>
+            </Button>
+            <Button asChild className="bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white shadow-sm">
+              <a href={`${appUrl}?auth=register`}>{dict.navbar.getStarted}</a>
+            </Button>
           </div>
         </div>
       </div>
