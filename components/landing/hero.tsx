@@ -5,11 +5,10 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import type { getDictionary } from "@/lib/i18n/get-dictionary";
 
 interface HeroProps {
-  onGetStarted: () => void;
   dict: ReturnType<typeof getDictionary>;
 }
 
-export function Hero({ onGetStarted, dict }: HeroProps) {
+export function Hero({ dict }: HeroProps) {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-gradient-to-b from-gray-50 via-white to-gray-50">
       {/* Subtle Background Effects */}
@@ -55,9 +54,11 @@ export function Hero({ onGetStarted, dict }: HeroProps) {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="xl" onClick={onGetStarted} className="w-full sm:w-auto group bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white shadow-lg shadow-indigo-500/30">
-                {dict.hero.ctaPrimary}
-                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              <Button size="xl" asChild className="w-full sm:w-auto group bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white shadow-lg shadow-indigo-500/30">
+                <a href="https://app.finpersona.com">
+                  {dict.hero.ctaPrimary}
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </a>
               </Button>
               <Button size="xl" variant="outline" asChild className="w-full sm:w-auto border-gray-300 bg-white hover:bg-gray-50 text-gray-700 hover:text-gray-900">
                 <a href="#how-it-works">{dict.hero.ctaSecondary}</a>

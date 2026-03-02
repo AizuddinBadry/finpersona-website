@@ -5,11 +5,10 @@ import { ArrowRight } from "lucide-react";
 import type { getDictionary } from "@/lib/i18n/get-dictionary";
 
 interface CTAProps {
-  onGetStarted: () => void;
   dict: ReturnType<typeof getDictionary>;
 }
 
-export function CTA({ onGetStarted, dict }: CTAProps) {
+export function CTA({ dict }: CTAProps) {
   return (
     <section className="py-24 relative overflow-hidden bg-white">
       {/* Background */}
@@ -26,9 +25,11 @@ export function CTA({ onGetStarted, dict }: CTAProps) {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button size="xl" onClick={onGetStarted} className="group bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white shadow-xl shadow-indigo-500/30">
-            {dict.cta.button}
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+          <Button size="xl" asChild className="group bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white shadow-xl shadow-indigo-500/30">
+            <a href="https://app.finpersona.com">
+              {dict.cta.button}
+              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            </a>
           </Button>
         </div>
 
