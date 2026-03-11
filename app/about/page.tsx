@@ -11,6 +11,14 @@ export const metadata: Metadata = {
     description: "Why we built Malaysia's first AI-powered personal finance and tax compliance app.",
     url: "https://finpersona.com/about",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Finpersona | AI-First Personal Finance for Malaysians",
+    description: "Why we built Malaysia's first AI-powered personal finance and tax compliance app.",
+  },
+  alternates: {
+    canonical: "https://finpersona.com/about",
+  },
 };
 
 const appUrl = process.env.NEXT_PUBLIC_APP_URL || "https://app.finpersona.com";

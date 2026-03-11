@@ -4,6 +4,23 @@ import Link from "next/link";
 export const metadata = {
   title: "Terms of Service | Finpersona",
   description: "Terms and conditions for using Finpersona personal finance and tax compliance app.",
+  openGraph: {
+    title: "Terms of Service | Finpersona",
+    description: "Terms and conditions for using Finpersona personal finance and tax compliance app.",
+    url: "https://finpersona.com/terms",
+  },
+  twitter: {
+    card: "summary",
+    title: "Terms of Service | Finpersona",
+    description: "Terms and conditions for using Finpersona personal finance and tax compliance app.",
+  },
+  alternates: {
+    canonical: "https://finpersona.com/terms",
+  },
+  robots: {
+    index: true,
+    follow: false,
+  },
 };
 
 export default function TermsPage() {

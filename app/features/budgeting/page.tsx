@@ -12,6 +12,14 @@ export const metadata: Metadata = {
     description: "Set monthly budgets, track spending by category, and get AI alerts before you overspend.",
     url: "https://finpersona.com/features/budgeting",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Smart Budgeting App Malaysia | Finpersona",
+    description: "Set monthly budgets, track spending by category, and get AI alerts before you overspend.",
+  },
+  alternates: {
+    canonical: "https://finpersona.com/features/budgeting",
+  },
 };
 
 const appUrl = process.env.NEXT_PUBLIC_APP_URL || "https://app.finpersona.com";

@@ -16,6 +16,11 @@ export const metadata: Metadata = {
     url: "https://finpersona.com/tax-relief",
     type: "article",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Complete LHDN Tax Relief Guide 2025 Malaysia | Finpersona",
+    description: "All 11 LHDN tax relief categories, claim limits, and tips to maximize every deduction in Malaysia.",
+  },
   alternates: {
     canonical: "https://finpersona.com/tax-relief",
   },

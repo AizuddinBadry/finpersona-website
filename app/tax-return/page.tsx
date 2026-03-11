@@ -16,6 +16,11 @@ export const metadata: Metadata = {
     url: "https://finpersona.com/tax-return",
     type: "article",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "How to Maximize Your Income Tax Return in Malaysia | Finpersona",
+    description: "Complete guide to LHDN tax relief, Borang BE filing, and getting back every ringgit you're owed.",
+  },
   alternates: {
     canonical: "https://finpersona.com/tax-return",
   },

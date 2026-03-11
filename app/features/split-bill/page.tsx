@@ -12,6 +12,14 @@ export const metadata: Metadata = {
     description: "Stop the awkward money conversations. Split any bill instantly — dinners, trips, rent, and more.",
     url: "https://finpersona.com/features/split-bill",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Split Bills Easily with Friends | Finpersona",
+    description: "Stop the awkward money conversations. Split any bill instantly — dinners, trips, rent, and more.",
+  },
+  alternates: {
+    canonical: "https://finpersona.com/features/split-bill",
+  },
 };
 
 const appUrl = process.env.NEXT_PUBLIC_APP_URL || "https://app.finpersona.com";

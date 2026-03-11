@@ -16,6 +16,11 @@ export const metadata: Metadata = {
     url: "https://finpersona.com/avoid-overpaying-tax",
     type: "article",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "How to Stop Overpaying Income Tax in Malaysia | Finpersona",
+    description: "Practical strategies to ensure you never pay more income tax than you should. Track relief year-round with Finpersona.",
+  },
   alternates: {
     canonical: "https://finpersona.com/avoid-overpaying-tax",
   },

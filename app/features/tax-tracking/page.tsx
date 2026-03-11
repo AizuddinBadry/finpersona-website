@@ -12,6 +12,14 @@ export const metadata: Metadata = {
     description: "Automatically track all 11 LHDN tax relief categories. Snap receipts, let AI categorize them, never miss a deduction.",
     url: "https://finpersona.com/features/tax-tracking",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "LHDN Tax Tracking App Malaysia | Finpersona",
+    description: "Automatically track all 11 LHDN tax relief categories. Snap receipts, let AI categorize them, never miss a deduction.",
+  },
+  alternates: {
+    canonical: "https://finpersona.com/features/tax-tracking",
+  },
 };
 
 const appUrl = process.env.NEXT_PUBLIC_APP_URL || "https://app.finpersona.com";

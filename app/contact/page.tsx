@@ -11,6 +11,14 @@ export const metadata: Metadata = {
     description: "Get in touch with the Finpersona team for support, feedback, or general enquiries.",
     url: "https://finpersona.com/contact",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Finpersona | Get in Touch",
+    description: "Get in touch with the Finpersona team for support, feedback, or general enquiries.",
+  },
+  alternates: {
+    canonical: "https://finpersona.com/contact",
+  },
 };
 
 const contacts = [

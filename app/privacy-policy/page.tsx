@@ -3,7 +3,24 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Privacy Policy | Finpersona",
-  description: "How Finpersona collects, uses, and protects your personal financial data. PDPA compliant.",
+  description: "How Finpersona collects, uses, and protects your personal financial data. PDPA (Malaysia) compliant.",
+  openGraph: {
+    title: "Privacy Policy | Finpersona",
+    description: "How Finpersona collects, uses, and protects your personal financial data. PDPA compliant.",
+    url: "https://finpersona.com/privacy-policy",
+  },
+  twitter: {
+    card: "summary",
+    title: "Privacy Policy | Finpersona",
+    description: "How Finpersona collects, uses, and protects your personal financial data. PDPA compliant.",
+  },
+  alternates: {
+    canonical: "https://finpersona.com/privacy-policy",
+  },
+  robots: {
+    index: true,
+    follow: false,
+  },
 };
 
 export default function PrivacyPolicyPage() {
