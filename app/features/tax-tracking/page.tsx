@@ -116,7 +116,7 @@ export default function TaxTrackingPage() {
         <section className="py-20 bg-gray-50">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-3">What's included</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-3">What&apos;s included</h2>
               <p className="text-gray-500">Everything you need to track taxes without being a tax expert.</p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">

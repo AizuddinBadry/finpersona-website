@@ -50,7 +50,7 @@ export default function BudgetingPage() {
               <span className="gradient-text">actually sticks.</span>
             </h1>
             <p className="text-lg text-gray-500 max-w-2xl mx-auto mb-8">
-              Set monthly limits, track every ringgit as it's spent, and get smart alerts before you go over. Finpersona turns good intentions into real habits.
+              Set monthly limits, track every ringgit as it&apos;s spent, and get smart alerts before you go over. Finpersona turns good intentions into real habits.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a href={`${appUrl}?auth=register`} className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-violet-600 hover:bg-violet-700 text-white text-sm font-medium rounded-xl transition-colors">

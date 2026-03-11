@@ -7,6 +7,7 @@ const ms = {
     tax: 'Cukai',
     howItWorks: 'Cara Kerja',
     pricing: 'Harga',
+    events: 'Acara',
   },
   hero: {
     badge: 'Aplikasi Kewangan Peribadi Berasaskan AI',

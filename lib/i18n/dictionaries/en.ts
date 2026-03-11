@@ -7,6 +7,7 @@ const en = {
     tax: 'Tax',
     howItWorks: 'How It Works',
     pricing: 'Pricing',
+    events: 'Events',
   },
   hero: {
     badge: 'AI-First Personal Finance App',

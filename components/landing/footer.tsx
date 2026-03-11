@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { getDictionary } from "@/lib/i18n/get-dictionary";
 
@@ -10,17 +11,17 @@ export function Footer({ dict }: FooterProps) {
     {
       heading: dict.footer.product,
       links: [
-        { label: dict.footer.splitBill, href: "#features" },
-        { label: dict.footer.budgeting, href: "#features" },
-        { label: dict.footer.taxTracking, href: "#tax" },
+        { label: dict.footer.splitBill, href: "/features/split-bill" },
+        { label: dict.footer.budgeting, href: "/features/budgeting" },
+        { label: dict.footer.taxTracking, href: "/features/tax-tracking" },
       ],
     },
     {
       heading: dict.footer.taxSection,
       links: [
-        { label: dict.footer.taxReturn, href: "#tax" },
-        { label: dict.footer.taxRelief, href: "#tax" },
-        { label: dict.footer.avoidOverpaying, href: "#tax" },
+        { label: dict.footer.taxReturn, href: "/tax-return" },
+        { label: dict.footer.taxRelief, href: "/tax-relief" },
+        { label: dict.footer.avoidOverpaying, href: "/avoid-overpaying-tax" },
       ],
     },
     {
@@ -55,9 +56,11 @@ export function Footer({ dict }: FooterProps) {
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-12">
           <div className="max-w-xs">
             <Link href="/" className="inline-block mb-3">
-              <img
+              <Image
                 src="/logo-light.svg"
                 alt="Finpersona"
+                width={144}
+                height={144}
                 className="h-36 w-auto"
               />
             </Link>

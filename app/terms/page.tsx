@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
@@ -179,7 +180,7 @@ Response time: We aim to respond to all legal inquiries within 5 business days.`
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(124,58,237,0.2),transparent)]" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           <Link href="/" className="inline-block mb-8">
-            <img src="/logo-light.svg" alt="Finpersona" className="h-8 w-auto mx-auto" />
+            <Image src="/logo-light.svg" alt="Finpersona" width={120} height={32} className="h-8 w-auto mx-auto" />
           </Link>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">Terms of Service</h1>
           <p className="text-white/50 text-base">Last updated: {lastUpdated}</p>

@@ -96,7 +96,7 @@ export function EventsSection({ dict }: EventsSectionProps) {
   }
 
   return (
-    <section className="py-24 relative overflow-hidden bg-gradient-to-b from-white via-red-50/30 to-white">
+    <section id="events" className="py-24 relative overflow-hidden bg-gradient-to-b from-white via-red-50/30 to-white">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(239,68,68,0.05),transparent_50%)]" />
 
