@@ -9,31 +9,43 @@ interface CTAProps {
 }
 
 export function CTA({ dict }: CTAProps) {
-  return (
-    <section className="py-24 relative overflow-hidden bg-white">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-50/30 via-blue-50/30 to-purple-50/30" />
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-200/30 rounded-full blur-[128px]" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-200/30 rounded-full blur-[128px]" />
+  const appUrl = process.env.NEXT_PUBLIC_APP_URL || "https://app.finpersona.com";
 
-      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-gray-900">
-          {dict.cta.title}
+  return (
+    <section className="py-24 relative overflow-hidden bg-gray-950">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_70%_at_50%_50%,rgba(124,58,237,0.08),transparent)]" />
+
+      <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+          {dict.cta.title}{" "}
+          <span className="text-violet-400">{dict.cta.titleHighlight}</span>
         </h2>
-        <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+        <p className="text-base text-white/50 mb-10 max-w-xl mx-auto">
           {dict.cta.subtitle}
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button size="xl" asChild className="group bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white shadow-xl shadow-indigo-500/30">
-            <a href="https://app.finpersona.com">
+        <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+          <Button
+            size="lg"
+            asChild
+            className="group bg-violet-600 hover:bg-violet-700 text-white border-0 h-11 px-7 text-sm font-medium"
+          >
+            <a href={`${appUrl}?auth=register`}>
               {dict.cta.button}
-              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
             </a>
+          </Button>
+          <Button
+            size="lg"
+            variant="ghost"
+            asChild
+            className="text-white/60 hover:text-white hover:bg-white/5 h-11 px-7 text-sm"
+          >
+            <a href="#how-it-works">{dict.cta.secondary}</a>
           </Button>
         </div>
 
-        <p className="mt-6 text-sm text-gray-500">
+        <p className="mt-6 text-sm text-white/25">
           {dict.cta.freeForever}
         </p>
       </div>

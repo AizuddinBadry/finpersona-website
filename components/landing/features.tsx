@@ -1,4 +1,11 @@
-import { Camera, Wand2, TrendingUp, Calculator } from "lucide-react";
+import {
+  Users,
+  PieChart,
+  Receipt,
+  Calculator,
+  Brain,
+  Wallet,
+} from "lucide-react";
 import type { getDictionary } from "@/lib/i18n/get-dictionary";
 
 interface FeaturesProps {
@@ -8,61 +15,81 @@ interface FeaturesProps {
 export function Features({ dict }: FeaturesProps) {
   const features = [
     {
-      icon: Camera,
-      title: dict.features.feature1Title,
-      description: dict.features.feature1Desc,
+      icon: Users,
+      title: dict.appFeatures.feature1Title,
+      description: dict.appFeatures.feature1Desc,
+      iconBg: "bg-pink-100",
+      iconColor: "text-pink-600",
+      accent: "group-hover:border-pink-200 group-hover:shadow-pink-100/60",
     },
     {
-      icon: Wand2,
-      title: dict.features.feature2Title,
-      description: dict.features.feature2Desc,
+      icon: PieChart,
+      title: dict.appFeatures.feature2Title,
+      description: dict.appFeatures.feature2Desc,
+      iconBg: "bg-blue-100",
+      iconColor: "text-blue-600",
+      accent: "group-hover:border-blue-200",
     },
     {
-      icon: TrendingUp,
-      title: dict.features.feature3Title,
-      description: dict.features.feature3Desc,
+      icon: Receipt,
+      title: dict.appFeatures.feature3Title,
+      description: dict.appFeatures.feature3Desc,
+      iconBg: "bg-amber-100",
+      iconColor: "text-amber-600",
+      accent: "group-hover:border-amber-200",
     },
     {
       icon: Calculator,
-      title: dict.features.feature4Title,
-      description: dict.features.feature4Desc,
+      title: dict.appFeatures.feature4Title,
+      description: dict.appFeatures.feature4Desc,
+      iconBg: "bg-violet-100",
+      iconColor: "text-violet-600",
+      accent: "group-hover:border-violet-200",
+    },
+    {
+      icon: Brain,
+      title: dict.appFeatures.feature5Title,
+      description: dict.appFeatures.feature5Desc,
+      iconBg: "bg-emerald-100",
+      iconColor: "text-emerald-600",
+      accent: "group-hover:border-emerald-200",
+    },
+    {
+      icon: Wallet,
+      title: dict.appFeatures.feature6Title,
+      description: dict.appFeatures.feature6Desc,
+      iconBg: "bg-indigo-100",
+      iconColor: "text-indigo-600",
+      accent: "group-hover:border-indigo-200",
     },
   ];
 
   return (
-    <section className="py-24 relative bg-gradient-to-b from-white via-gray-50 to-white" id="features">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-gray-900">
-            {dict.features.title}{" "}
-            <span className="bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">{dict.features.titleHighlight}</span>
+    <section className="py-24 relative overflow-hidden bg-white" id="features">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_40%_at_50%_100%,rgba(124,58,237,0.04),transparent)]" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-14">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            {dict.appFeatures.title}{" "}
+            <span className="gradient-text">{dict.appFeatures.titleHighlight}</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            {dict.features.subtitle}
+          <p className="text-lg text-gray-500 max-w-2xl mx-auto">
+            {dict.appFeatures.subtitle}
           </p>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group relative backdrop-blur-xl bg-white/60 border border-gray-200/60 rounded-2xl p-8 transition-all duration-300 hover:border-indigo-300/60 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1"
+              className={`group relative bg-white border border-gray-100 rounded-2xl p-6 transition-all duration-300 card-hover shadow-sm ${feature.accent}`}
             >
-              {/* Subtle gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-indigo-50/50 to-blue-50/50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-              {/* Icon */}
-              <div className="relative w-14 h-14 rounded-xl bg-gradient-to-br from-indigo-100 to-blue-100 flex items-center justify-center mb-6 transition-transform group-hover:scale-110 shadow-sm">
-                <feature.icon className="w-7 h-7 text-indigo-600" />
+              <div className={`w-11 h-11 rounded-xl ${feature.iconBg} flex items-center justify-center mb-5`}>
+                <feature.icon className={`w-5 h-5 ${feature.iconColor}`} />
               </div>
-
-              {/* Content */}
-              <h3 className="relative text-xl font-semibold mb-3 text-gray-900">{feature.title}</h3>
-              <p className="relative text-gray-600 leading-relaxed">
-                {feature.description}
-              </p>
+              <h3 className="text-base font-semibold text-gray-900 mb-2">{feature.title}</h3>
+              <p className="text-sm text-gray-500 leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>

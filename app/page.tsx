@@ -7,6 +7,8 @@ import {
   Trust,
   CTA,
   Footer,
+  EventsSection,
+  EventPromoModal,
 } from "@/components/landing";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 
@@ -18,11 +20,13 @@ export default function Home() {
       <Navbar dict={dict} lang="en" />
       <Hero dict={dict} />
       <Features dict={dict} />
-      <HowItWorks dict={dict} />
       <Categories dict={dict} />
+      <HowItWorks dict={dict} />
+      <EventsSection dict={dict} />
       <Trust dict={dict} />
       <CTA dict={dict} />
       <Footer dict={dict} />
+      <EventPromoModal />
     </main>
   );
 }

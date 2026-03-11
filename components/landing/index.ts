@@ -6,4 +6,5 @@ export { Categories } from "./categories";
 export { Trust } from "./trust";
 export { CTA } from "./cta";
 export { Footer } from "./footer";
+export { EventsSection, EventPromoModal } from "../events";
 

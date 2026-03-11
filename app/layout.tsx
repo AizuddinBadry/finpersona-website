@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "FinPersona - Smart Malaysian Tax Relief Tracker",
+  title: "FinPersona - AI-first personal finance and tax compliance for Malaysians.",
   description: "Track your receipts, maximize your LHDN tax relief, and save money on taxes with AI-powered receipt scanning.",
 };
 
